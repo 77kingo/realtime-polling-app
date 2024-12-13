@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  animation: gradient 10s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.poll-button {
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background: #6DD5FA;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.poll-button:hover {
+  background: #00C9FF;
+  transform: scale(1.1);
+}
+
+.results {
+  margin-top: 25px;
+}
+
+.results h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.result-bar {
+  margin: 10px 0;
+  height: 35px;
+  border-radius: 15px;
+  background: #ddd;
+  position: relative;
+  overflow: hidden;
+  animation: growBar 1s ease-in-out;
+}
+
+@keyframes growBar {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.result-bar span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+}
+
+#option1-bar { background: linear-gradient(to right, #f8b500, #fcf6bd); }
+#option2-bar { background: linear-gradient(to right, #24C6DC, #514A9D); }
+#option3-bar { background: linear-gradient(to right, #FF512F, #F09819); }

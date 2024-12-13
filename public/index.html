@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-time Polling App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Real-time Polling App</h1>
+    </header>
+    <div id="poll">
+      <button class="poll-button" onclick="vote('option1')">Option 1</button>
+      <button class="poll-button" onclick="vote('option2')">Option 2</button>
+      <button class="poll-button" onclick="vote('option3')">Option 3</button>
+    </div>
+    <div id="results" class="results">
+      <h2>Results:</h2>
+      <div class="result-bar" id="option1-bar"><span id="option1">0</span></div>
+      <div class="result-bar" id="option2-bar"><span id="option2">0</span></div>
+      <div class="result-bar" id="option3-bar"><span id="option3">0</span></div>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
